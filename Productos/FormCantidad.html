@@ -1,0 +1,56 @@
+	<!-- Button  modal para edicion de datos -->	
+				<div class="container">
+	            	<form method="POST" action="ActualizarCantidad.php" enctype="multipart/form-data" id="editar_form">
+	            	<input type="hidden" name="id" value="<?=$_SESSION['Producto']?>">
+					
+					<div class="card text-center">
+					  <div class="card-body">
+					    <img style="max-width: 25%;" src="image/<?=$_SESSION['ProductoN']?>.png">
+					    <div class="row">
+					    	<div class="mx-auto">
+					    	<label>Cantidad actual</label>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="mx-auto">
+					    	<input style="text-align: center;" class="btn btn-light" type="text" placeholder="<?=$_SESSION['cantidad']?>" name="anterior" readonly disabled>
+					    	</div>
+					    </div>
+					    <br>
+					    <div class="row">
+					    	<div class="mx-auto">
+					    	<label>Cantidad a Entrar/Salir</label>
+					    	</div>
+					    </div>
+					    <div class="row ">
+					            <div class="mx-auto">
+					            <input style="text-align: center;" class="form-control"type="text" name="cantidad" value="1">
+					            </div>
+					    </div>
+					    <br>
+					    <div class="row">
+					    	<div class="mx-auto">
+					    	<label>Destinatario</label>
+					    	</div>
+					    </div>
+					    <div class="row ">
+					            <div class="mx-auto">
+					            <input style="text-align: center;" class="form-control"type="text" name="destinatario" value="">
+					            </div>
+					    </div>
+					    <br>
+					    <div class="row">
+					            <div class="mx-auto">
+					            	<input type="submit" class="btn btn-success btn-lg" name="actualizar" value="Entrada">
+					            </div>
+					            <div class="mx-auto">
+					            	<input type="submit" class="btn btn-danger btn-lg" name="actualizar" value="Salida">
+					            </div>
+					    </div>
+					    <div class="row">
+					            <div class="mx-auto">
+					            	<input type="submit" class="btn btn-danger btn-lg" name="actualizar" value="Cancelar">
+					            </div>
+					    </div>
+					  </div>
+					  

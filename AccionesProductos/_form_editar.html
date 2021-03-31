@@ -1,0 +1,31 @@
+	<!-- Button  modal para edicion de datos -->
+
+	            <form method="POST" action="php/actualizarProducto.php" enctype="multipart/form-data" id="editar_form">
+					<input type="hidden" name="IdProducto" value="<?=$persona['IdProducto']?>">
+					<label>Nombre del producto</label>
+					<input type="" name="nombreproducto" id="nombreproducto" class="form-control input-sm" value="<?=$persona['NombreProducto']?>">
+					<label>Descripción del producto</label>
+					<input type="" name="descripcionproducto" id="descripcionproducto" class="form-control input-sm" value="<?=$persona['Descripcion']?>">
+					<label>Precio estimado</label>
+					<input type="" name="precioestimado" id="precioestimado" class="form-control input-sm" value="<?=$persona['PrecioEstimado']?>">
+					
+					<br>
+					<br>
+					<input type="submit" class="btn btn-success btn-lg" name="actualizar" value="Actualizar">
+				</form>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+				 <form method="POST" action="php/eliminarProducto.php" enctype="multipart/form-data">
+	            	<input type="hidden" name="IdProducto" value="<?=$persona['IdProducto']?>">
+	            	<input type="submit" class="btn btn-danger btn-lg btn-block" name="eliminar" value="Eliminar Producto">
+	            </form>
+
+				<br>
+
+
+
+			

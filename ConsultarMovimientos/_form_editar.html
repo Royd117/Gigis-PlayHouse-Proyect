@@ -1,0 +1,52 @@
+	<!-- Button  modal para edicion de datos -->
+
+	            <form method="POST" action="php/actualizarPersonal.php" enctype="multipart/form-data" id="editar_form">
+	            	<input type="hidden" name="id" value="<?=$persona['IdPersonal']?>">
+					<label>Nombre completo</label>
+					<input type="" name="nombreu" id="nombreu" class="form-control input-sm" value="<?=$persona['NombrePersonal']?>">
+					<label>Teléfono</label>
+					<input type="" name="telefonou" id="telefonou" class="form-control input-sm" value="<?=$persona['TelefonoPersonal']?>">
+					<label>Correo electrónico</label>
+					<input type="" name="correou" id="correou" class="form-control input-sm" value="<?=$persona['CorreoPersonal']?>">
+					<label>Puesto de trabajo</label>
+					<input type="" name="puestou" id="puestou" class="form-control input-sm" value="<?=$persona['PuestoPersonal']?>">
+						<div class="form-group">
+					 	<label for="exampleInputPassword1">Contraseña</label>
+					 	<input type="password" class="form-control" name="passwordu" id="passwordu" placeholder="Contraseña" value="<?=$persona['ContrasenaPersonal']?>" required>
+					</div>
+					<label>Rol anterior</label>
+					<input type="text" name="anterior" value="<?=$persona['RolPersonal']?>" class="form-control input-sm"disabled>
+					<label>Nuevo Rol</label>
+					<select class="form-control" id="rolu"  name="rolu"class="form-control input-sm" >
+						<option value="<?=$persona['RolPersonal']?>"><?=$persona['RolPersonal']?></option>
+						<option>Ninguno</option>
+						<option value="Administrador">Administrador</option>
+						<option value="Voluntario">Voluntario</option>
+						<option value="Personal">Personal</option>
+					</select>
+					<br>
+					<label>Fecha de inicio de colaboración</label>
+					<input id="fechaicolabu" name="fechaicolabu" value="<?=$persona['FechaInicioLaboral']?>">
+					<br>
+					<label>Fecha de fin de colaboración</label>
+					<input id="fechafcolabu" name="fechafcolabu" value="<?=$persona['FechaFinLaboral']?>">
+					<br>
+					<br>
+					<input type="submit" class="btn btn-success btn-lg" name="actualizar" value="Actualizar">
+				</form>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+				 <form method="POST" action="php/eliminarPersonal.php" enctype="multipart/form-data">
+	            	<input type="hidden" name="id" value="<?=$persona['IdPersonal']?>">
+	            	<input type="submit" class="btn btn-danger btn-lg btn-block" name="eliminar" value="Eliminar usuario">
+	            </form>
+
+				<br>
+
+
+
+			

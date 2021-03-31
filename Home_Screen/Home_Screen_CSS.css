@@ -1,0 +1,8 @@
+#Main_navbar{
+	background-color: #ffc907; 
+}
+#Menus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

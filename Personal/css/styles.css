@@ -1,0 +1,18 @@
+h1{
+	text-align: center;
+	color: orange;
+}
+
+table {
+    padding: 0;
+    border-spacing: 0;                
+}
+
+.nav-item:hover, .nav-link:hover{
+	background: #01a89e;
+	color: #fff;
+}
+
+
+
+

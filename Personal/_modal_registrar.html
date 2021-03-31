@@ -1,0 +1,47 @@
+
+	<!-- Button  modal para registrar -->
+	
+	<div class="modal fade bd-example-modal-lg" id="modalnuevo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-warning">
+					<h5 class="modal-title" id="exampleModalLongTitle">Registrar Personal</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<label>Nombre completo</label>
+					<input type="" name="nombre" id="nombre" class="form-control input-sm" >
+					<label>Teléfono</label>
+					<input type="" name="telefono" id="telefono" class="form-control input-sm">
+					<label>Correo electrónico</label>
+					<input type="" name="correo" id="correo" class="form-control input-sm">
+						<div class="form-group">
+					 	<label for="exampleInputPassword1">Contraseña</label>
+					 	<input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" required>
+					</div>
+					<label>Puesto de trabajo</label>
+					<input type="" name="puesto" id="puesto" class="form-control input-sm" >
+					<br>
+					<label>Rol</label>
+					<select class="form-control" id="rol" class="form-control input-sm">
+						<option>Ninguno</option>
+						<option value="Administrador">Administrador</option>
+						<option value="Voluntario">Voluntario</option>
+						<option value="Personal">Personal</option>
+					</select>
+					<br>
+					<label>Fecha de inicio de colaboración</label>
+					<input id="fechaicolab" name="fechaicolab" placeholder="dd/mm/aaaa">
+					<br>
+					<label>Fecha de fin de colaboración</label>
+					<input id="fechafcolab" name="fechafcolab" placeholder="dd/mm/aaaa">
+					<br>			
+				</div>
+				<div class="modal-footer bg-light">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="guardarnuevo">Registrar</button>
+				</div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Productos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/Producto_CSS.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+          <div class="row"> 
+              <div class="col-2">
+                <img src="./image/logo2-2.png" width="150" height="100" class="d-inline-block    align-top" alt="" loading="lazy">
+              </div>
+              <div class="col-8"></div>
+              <div class="col-2" style="padding-top: 40px;">
+                <a href="../Login/Login.html" style="color: #000">Cerrar Sesión</a>
+              </div>
+          </div>
+        </div>
+    </header>
+
+
+    <ul class="nav nav-fill nav-light bg-light">
+      <li class="nav-item">
+        <a class="nav-link " href="../Avance2t/Tabla_Personal/index.php">Personal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../tabladonadores/index.php">Donadores</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Generar Reporte</a>
+      </li>
+    </ul>
+
+    <div class="w-100 p-3"></div>
+    <div class="container">
+      <input type="text" id="myInput" onkeyup="searchBar()" placeholder="Buscar producto"> 
+      
+      <div class="row" id="myUL">
+        
+        <div class="col-3 card" style="width: 18rem; margin-top: 10px; cursor: pointer;">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/810Klt%2BNDTL._AC_SX425_.jpg" class="card-img-top imgsetup" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <label class="card-text">Papel</label>
+          </div>
+        </div>
+        <div class="col-3 card" style="width: 18rem; margin-top: 10px; cursor: pointer;">
+          <img src="./image/Cloro.png" class="card-img-top imgsetup" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <label class="card-text">Cloro</label>
+          </div>
+        </div>
+        <div class="col-3 card" style="width: 18rem; margin-top: 10px; cursor: pointer;">
+          <img src="https://www.smartnfinal.com.mx/wp-content/uploads/2018/06/10337-Detergente-maxi-efecto-1-2-3-9-L.jpg" class="card-img-top imgsetup" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <label class="card-text">Detergente</label>
+          </div>
+        </div>
+        <div class="col-3 card" style="width: 18rem; margin-top: 10px; cursor: pointer;">
+          <img src="https://www.chedraui.com.mx/medias/750224476710-00-CH1200Wx1200H?context=bWFzdGVyfHJvb3R8MTgyMTY1fGltYWdlL2pwZWd8aGM4L2gzNi85MTI3MjY2NzEzNjMwLmpwZ3xiMjNmNDEyNDg1ZjBmZDA2NzMyN2M1Yzg2ZTFhMmZiYjljNGUxM2UxMjI0MmY1MGJkNTcwMGQzMGU3NzE5M2Qz" class="card-img-top imgsetup" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <label class="card-text">Jabon Liquido</label>
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+
+
+
+    </div>
+    <div class="w-100 p-3"></div>
+    <div class="container">
+      <div class="col-md-12 text-center">
+        <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#exampleModal" style="background-color: #7ac043; color: #fff;">Agregar Producto</button>
+      </div>
+    </div>
+    <div class="w-100 p-3"></div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header bg-warning">
+                            <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-1"></div> 
+                                    <div class="col-5 my-auto" align="center">
+                                        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                                        <label for="file" style="cursor: pointer;">Elegir Imagen</label>
+                                        <img class="img-fluid" id="output" />
+                                        <script src="./js/AddProduct.js"></script>
+
+                                    </div>
+
+                                    <div class="col-5 my-auto" align="center">
+                                        <input type="text" class="form-control" placeholder="Nombre del Producto" id="NombreProducto" name="NombreProducto"><br>
+                                        <textarea class="form-control rounded-0" style="resize: none;" id="Descripcion" rows="3" placeholder="Descripción"></textarea><br>
+                                        <input type="number" class="form-control" min="0" placeholder="Precio Estimado" id="PrecioEstimado" name="PrecioEstimado">
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+  <footer></footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>

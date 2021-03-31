@@ -1,0 +1,28 @@
+	<!-- Button  modal para registrar -->
+	
+	<div class="modal fade bd-example-modal-lg" id="modalarchivo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"  >
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<form method="POST" action="php/subirArchivo.php" enctype="multipart/form-data">
+				<div class="modal-header bg-warning">
+					<h5 class="modal-title" id="exampleModalLongTitle">Subir un archivo</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="hidden" name="id" value="<?=$persona['IdPersonal']?>">
+					<label>Nombre del archivo</label>
+					<input type="" name="nombrea" id="nombrea" class="form-control input-sm" >
+					<br>
+					<label>Seleccione el archivo</label>
+					<br>
+					<input type="file" name="myfile" id="myfile"><br>
+				</div>
+				<div class="modal-footer bg-light">
+					<input type="submit" class="btn btn-primary" name="save" data-dismiss="modal" id="save" value="Subir">
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>

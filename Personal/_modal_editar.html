@@ -1,0 +1,53 @@
+	<!-- Button  modal para edicion de datos -->
+
+	<!-- Modal -->
+	<div class="modal fade bd-example-modal-lg" id="modalEdicion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header  bg-warning">
+					<h5 class="modal-title" id="exampleModalLongTitle">Editar datos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<input type="text" hidden="" id="idpersonal" name="" required>
+					<label>Nombre completo</label>
+					<input type="" name="" id="nombreu" class="form-control input-sm" >
+					<label>Correo electrónico</label>
+					<input type="" name="" id="correou" class="form-control input-sm">
+					<label>Teléfono</label>
+					<input type="" name="" id="telefonou" class="form-control input-sm">
+					<label>Cargo</label>
+					<select class="form-control" id="cargou" class="form-control input-sm">
+						<option>Ninguno</option>
+						<option>Personal</option>
+					  	<option>Voluntario</option>
+					  	<option>Administrador</option>
+					</select>
+				<!--	<input type="" name="" id="cargo" class="form-control input-sm">-->
+					<br>
+					<label>Fecha de inicio de colaboración</label>
+					<input id="fechacolabu">
+					<br>
+					<label for="exampleFormControlFile1">Añadir contrato</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					<br>
+					<br>
+					<label for="exampleFormControlFile1">Añadir copia INE</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					<br>
+					<br>
+					<label for="exampleFormControlFile1">Añadir comprobante de domicilio</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile1">
+					<br>
+					<label for="exampleFormControlFile1">Añadir respaldo</label>
+					<input type="file" class="form-control-file" id="exampleFormControlFile2">
+					
+				</div>
+				<div class="modal-footer bg-light">
+					<button type="button" class="btn btn-success" data-dismiss="modal" id="actualizardatos">Actualizar</button>
+				</div>
+			</div>
+		</div>
+	</div>

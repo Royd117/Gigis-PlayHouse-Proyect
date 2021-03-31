@@ -1,0 +1,11 @@
+<div class="container ">
+	<br>
+	<?php if(isset($_GET["id"])):?>
+	<h1><?=nombre_personal($_GET['id'])?></h1>
+	<?php else:?>
+	  <h1>Generar Reporte</h1>
+	<?php  endif;?>
+
+	
+	<br>
+	<div class="col-sm-12 table-responsive">

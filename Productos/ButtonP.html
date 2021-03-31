@@ -1,0 +1,48 @@
+<div class="w-100 p-3"></div>
+    <div class="container">
+      <div class="col-md-12 text-center">
+        <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#exampleModal" style="background-color: #7ac043; color: #fff;">Agregar Producto</button>
+      </div>
+    </div>
+    <div class="w-100 p-3"></div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <form action="AgregarProducto.php" method="post" enctype="multipart/form-data" id="asd">
+
+                        <div class="modal-header bg-warning">
+                            <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-1"></div> 
+                                    <div class="col-5 my-auto" align="center">
+                                        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                                        <label for="file" style="cursor: pointer;">Elegir Imagen</label>
+                                        <img class="img-fluid" id="output" />
+                                        <script src="./js/AddProduct.js"></script>
+                                    </div>
+                                    <div class="col-5 my-auto" align="center">
+                                        <input type="text" class="form-control" placeholder="Nombre del Producto" id="NombreProducto" name="NombreProducto"><br>
+                                        <textarea class="form-control rounded-0" style="resize: none;" id="Descripcion" rows="3" placeholder="Descripción" 
+                                        name="Descripcion" form="asd"></textarea><br>
+                                        <input type="number" class="form-control" min="0" placeholder="Precio Estimado" id="PrecioEstimado" name="PrecioEstimado">
+                                    </div>
+                                    <div class="col-1"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>

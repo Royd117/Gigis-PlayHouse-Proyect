@@ -1,0 +1,40 @@
+	<!-- Button  modal para edicion de datos -->
+
+	            <form method="POST" action="php/actualizarDonador.php" enctype="multipart/form-data" id="editar_form">
+	            	<input type="hidden" name="id" value="<?=$persona['IdDonador']?>">
+					<label>Nombre completo</label>
+					<input type="" name="nombredu" id="nombredu" class="form-control input-sm" value="<?=$persona['NombreDonador']?>">
+					<label>Teléfono</label>
+					<input type="" name="telefonodu" id="telefonodu" class="form-control input-sm" value="<?=$persona['TelefonoDonador']?>">
+					<label>Correo electrónico</label>
+					<input type="" name="correodu" id="correodu" class="form-control input-sm" value="<?=$persona['CorreoDonador']?>">
+					<label>Estado</label>
+					<select class="form-control" id="recurrenteu"  name="recurrenteu" class="form-control input-sm">
+						<option value="<?=$persona['Recurrente']?>"><?=$persona['Recurrente']?></option>
+						<option value="Activo">Activo</option>
+						<option value="Inactivo">Inactivo</option>
+					</select>
+
+					<br>
+					<br>
+					<br>
+					<br>
+					<input type="submit" class="btn btn-success btn-lg btn-block" name="actualizar" value="Actualizar">
+				</form>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+
+				 <form method="POST" action="php/eliminarDonador.php" enctype="multipart/form-data">
+	            	<input type="hidden" name="id" value="<?=$persona['IdDonador']?>">
+	            	<input type="submit" class="btn btn-danger btn-lg " name="eliminar" value="Eliminar Donador">
+	            </form>
+
+				<br>
+
+
+
+			
